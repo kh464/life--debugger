@@ -1,0 +1,24 @@
+[package]
+name = "life-debugger-desktop"
+version = "0.1.0"
+description = "Life Debugger Desktop MVP"
+edition = "2021"
+
+[lib]
+name = "life_debugger_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+reqwest = { version = "0.12", features = ["json"] }
+keyring = "3"
+base64 = "0.22"
+rand = "0.8"
+uuid = { version = "1", features = ["v4"] }
+windows = { version = "0.58", features = ["Win32_UI_WindowsAndMessaging", "Win32_System_Threading", "Win32_System_ProcessStatus", "Win32_UI_Input_KeyboardAndMouse", "Win32_System_SystemInformation", "Win32_Security_Cryptography"] }
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }

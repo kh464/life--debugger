@@ -1,0 +1,94 @@
+# Life Debugger monorepo ignore rules
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# Logs
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and local secrets
+.env
+.env.*
+!.env.example
+*.local
+local.properties
+secrets.properties
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+
+# Runtime data and local databases
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.realm
+/data/
+/tmp/
+/temp/
+
+# Node / Vite / frontend
+node_modules/
+dist/
+build/
+.vite/
+.turbo/
+.cache/
+coverage/
+
+# Tauri / Rust
+target/
+desktop-app/src-tauri/target/
+
+# Android / Gradle
+.gradle/
+**/build/
+captures/
+*.apk
+*.aab
+*.ap_
+*.aar
+*.dex
+*.class
+
+# Kotlin / Java generated output
+out/
+.kotlin/
+
+# Tauri generated packages and installers
+desktop-app/src-tauri/target/
+desktop-app/src-tauri/gen/android/
+*.msi
+*.exe
+*.dmg
+*.AppImage
+*.deb
+*.rpm
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.eslintcache
+
+# Keep important reproducibility files tracked:
+# - desktop-app/package-lock.json
+# - desktop-app/src-tauri/Cargo.lock
+# - android-app/gradle/wrapper/gradle-wrapper.jar
